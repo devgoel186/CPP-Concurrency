@@ -14,4 +14,17 @@
     - over a network, concurrency can help increase parallelism and performance
 
 ## Concurrency with multiple threads
-- 
+- advantages: 
+    - low overhead because of shared address space and lack of protection of data between threads
+- disadvantages:
+    - data seen by each thread must be consistent as it is shared between threads
+
+## Achieving concurrency
+- By dividing tasks - Task parallelism
+- By dividing tasks - Data parallelism
+
+## When not to use concurrency
+- Unless the potential gain in performance is significant enough to justify the additional costs of maintaining multithreaded code, don't use concurrency
+- There's an inherent overhead associated with launching a thread, and depending on the number of threads launched and type of task, it might be beneficial, or it may make matters worse
+- Each thread requires a separate stack space, this can clog up memory/address space
+- More threads = more context switching
